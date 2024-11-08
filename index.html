@@ -1,83 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of P Jayanth Kumar Reddy showcasing education, skills, experience, projects, and certifications.">
-    <title>P Jayanth Kumar Reddy | Portfolio</title>
-    <link rel="stylesheet" href="protfolio styles(basic).css">
+    <title>Portfolio - P. Jayanth Kumar Reddy</title>
+    <link rel="stylesheet" href="pro.css">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <h1>P Jayanth Kumar Reddy</h1>
-            <p>Bengaluru, INDIA | <a href="tel:+919059474445">9059474445</a> | <a href="mailto:pjayanthreddy789@gmail.com">pjayanthreddy789@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/p-jayanth/" target="_blank" rel="noopener noreferrer">View Profile</a> | 
-            GitHub: <a href="https://github.com/P-jayanth-reddy" target="_blank" rel="noopener noreferrer">View Repository</a></p>
-            <button id="dark-mode-toggle">Toggle Dark Mode</button>
-        </div>
-    </header>
+    <nav class="navbar">
+        <ul>
+            <li onclick="scrollToSection('about')">About</li>
+            <li onclick="scrollToSection('education')">Education</li>
+            <li onclick="scrollToSection('skills')">Skills</li>
+            <li onclick="scrollToSection('projects')">Projects</li>
+            <li onclick="scrollToSection('certifications')">Certifications</li>
+            <li onclick="scrollToSection('languages')">Languages</li>
+            <li onclick="scrollToSection('contact')">Contact</li>
+        </ul>
+    </nav>
 
     <main>
-        <section id="education" class="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Jain University (currently JGI), India</h3>
-                <p>2021 - 2025</p>
-                <p>Branch: CSE General</p>
-            </div>
-            <div class="education-item">
-                <h3>Shree Swaminarayan Gurukul, Karnataka, India</h3>
-                <p>2020 - 2021</p>
-                <p>State Board (Class XII)</p>
-            </div>
-            <div class="education-item">
-                <h3>Sri Chaitanya School, Andhra Pradesh, India</h3>
-                <p>2018 - 2019</p>
-                <p>State Board (Class X)</p>
-            </div>
-        </section>
-
-        <section id="about-me" class="about-me">
-            <h2>About Me</h2>
+        <section id="about">
+            <h1>Hello, I'm P. Jayanth Kumar Reddy</h1>
+            <h3>
+                I am a <span id="typed"></span>
+            </h3>
             <p>
-                I’m Jayanth Kumar Reddy, a dedicated Computer Science student at Jain University (JGI) with an expected graduation in 2025. 
-                My academic journey has been marked by a strong foundation in programming, web development, full-stack development, 
-                and database management. I have a strong interest in technology and am always looking for new possibilities to learn and grow. 
-                I am excited about the future and eager to contribute to innovative projects and solutions.
+                I’m a dedicated Computer Science student at Jain University (JGI) with an expected graduation in 2025.
+                My academic journey has been marked by a strong foundation in programming, web development, and database management.
             </p>
         </section>
 
-        <section id="skills" class="skills">
-            <h2>Skills</h2>
+        <section id="education">
+            <h2>My Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <h3>Jain University, India</h3>
+                    <p>Branch: CSE General (2021 - 2025)</p>
+                </div>
+                <div class="education-item">
+                    <h3>Shree Swaminarayan Gurukul, Karnataka, India</h3>
+                    <p>State Board (Class XII) (2020 - 2021)</p>
+                </div>
+                <div class="education-item">
+                    <h3>Sri Chaitanya School, Andhra Pradesh, India</h3>
+                    <p>State Board (Class X) (2018 - 2019)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
             <ul>
-                <li><strong>Programming:</strong> Python, Java</li>
-                <li><strong>Web Development:</strong> HTML, CSS, Markdown</li>
-                <li><strong>Databases:</strong> SQL (MySQL)</li>
-                <li><strong>API Documentation:</strong> XML, JSON</li>
-                <li><strong>Cloud Computing</strong></li>
+                <li>Programming: Python, Java</li>
+                <li>Web Development: HTML, CSS, Markdown</li>
+                <li>Databases: SQL (MySQL)</li>
+                <li>API Documentation: XML, JSON</li>
+                <li>Cloud Computing</li>
             </ul>
         </section>
 
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <div class="project-item">
-                <h3>Hangman Game in Python</h3>
-                <p>Developed a text-based Hangman game in Python, which improved my knowledge of fundamental programming concepts like loops, conditionals, and data structures (sets and lists).</p>
-            </div>
-            <div class="project-item">
-                <h3>Cricket Database Management System</h3>
-                <p>Created a relational database with SQL to handle player statistics, match outcomes, and team information for Australia and India.</p>
-            </div>
-            <div class="project-item">
-                <h3>ConnectChat</h3>
-                <p>Created a Chat App for Real-Time Communication using HTML, CSS, and JavaScript, utilizing Socket.IO for instant messaging and user management.</p>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <div class="project-item">
+                    <h3>Hangman Game</h3>
+                    <p>Developed a text-based Hangman game in Python, improving knowledge of programming concepts.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Cricket Database Management System</h3>
+                    <p>Created a relational database for player statistics and match outcomes using SQL.</p>
+                </div>
+                <div class="project-item">
+                    <h3>ConnectChat</h3>
+                    <p>Developed a chat application for real-time communication using HTML, CSS, and JavaScript.</p>
+                </div>
             </div>
         </section>
 
-        <section id="certifications" class="certifications">
+        <section id="certifications">
             <h2>Certifications</h2>
             <ul>
                 <li>Python Certificate</li>
@@ -87,7 +88,7 @@
             </ul>
         </section>
 
-        <section id="languages" class="languages">
+        <section id="languages">
             <h2>Languages</h2>
             <ul>
                 <li>Telugu</li>
@@ -97,14 +98,22 @@
                 <li>Japanese</li>
             </ul>
         </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 P Jayanth Kumar Reddy. All rights reserved.</p>
+        <p>© 2024 P. Jayanth Kumar Reddy. All Rights Reserved.</p>
     </footer>
 
-    <script src="protfolio(basic).js"></script>
+    <script src="pro.js"></script>
 </body>
-
 </html>
-
