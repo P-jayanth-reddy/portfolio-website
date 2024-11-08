@@ -1,103 +1,98 @@
-body, h1, h2, p, ul {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
     background-color: #f4f4f4;
-    transition: background-color 0.3s, color 0.3s;
+    color: #333;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-header {
-    background: #333;
+.navbar {
+    background-color: #333;
     color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header h1 {
-    margin-bottom: 0.5rem;
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
-header p {
-    margin: 0.5rem 0;
-}
-
-header a {
-    color: #fff;
-    text-decoration: none;
-}
-
-header button {
-    background: #555;
-    border: none;
-    color: #fff;
-    padding: 0.5rem 1rem;
+.navbar li {
+    margin: 0 15px;
     cursor: pointer;
+    transition: color 0.3s;
 }
 
-header button:hover {
-    background: #666;
-}
-
-main {
-    padding: 2rem 0;
+.navbar li:hover {
+    color: #008cba;
 }
 
 section {
-    margin-bottom: 2rem;
+    padding: 60px 20px;
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    background: #333;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 5px;
+h1, h2, h3 {
+    color: #008cba;
+}
+
+.education-container, .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .education-item, .project-item {
-    margin-bottom: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-ul {
-    list-style: none;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-ul li {
-    margin-bottom: 0.5rem;
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005f75;
 }
 
 footer {
-    background: #333;
-    color: #fff;
     text-align: center;
-    padding: 1rem 0;
-}
-
-body.dark-mode {
+    padding: 20px 0;
     background-color: #333;
-    color: #f4f4f4;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-body.dark-mode header,
-body.dark-mode footer {
-    background-color: #222;
-}
-
-body.dark-mode header button {
-    background-color: #777;
-}
-
-body.dark-mode header button:hover {
-    background-color: #888;
-}
