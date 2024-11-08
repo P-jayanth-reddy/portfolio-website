@@ -1,22 +1,31 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    const body = document.body;
+// Smooth scroll to section
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+}
 
-    if (typeof(Storage) !== 'undefined') {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            body.classList.add('dark-mode');
-        }
+// Typed.js effect for "About" section
+document.addEventListener('DOMContentLoaded', () => {
+    const options = {
+        strings: ["Web Designer", "Web Developer", "Graphic Designer", "YouTuber"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true,
+    };
+
+    const typedElement = document.getElementById('typed');
+    if (typedElement) {
+        const typed = new Typed(typedElement, options);
     }
 
-    toggleButton.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
+    // Handle contact form submission
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = contactForm.name.value;
+        alert(`Thank you for your message, ${name}!`);
+        contactForm.reset(); // Reset form after submission
     });
 });
+
 
